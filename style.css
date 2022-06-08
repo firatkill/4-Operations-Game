@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#selectScreen {
+  min-width: 50%;
+  margin-top: 10%;
+  background-color: rgb(188, 223, 165);
+  border-radius: 10px;
+  padding: 1rem;
+}
+@media only screen and (min-width: 950px) {
+  .container {
+    width: 25%;
+  }
+}
+#selectButtons {
+  margin-top: 2rem;
+}
+#selectButtons .col {
+  text-align: center;
+  margin: 1rem 0;
+}
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
