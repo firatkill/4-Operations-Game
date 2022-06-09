@@ -50,7 +50,7 @@ let myInterval = setInterval(() => {
   operationSpan.textContent = startTimer;
   if (startTimer == 0) {
     clearInterval(myInterval);
-    generateQuestion();
+    generateQuestion(selectedOperator);
     timeLeft = 60;
     callInterval();
   }
@@ -118,6 +118,7 @@ function updateInput(e) {
 }
 
 function generateQuestion(operator) {
+  console.log(operator);
   if (operator == "ADDITION" || operator == "SUBTRACTION") {
     if (operator == "ADDITION") {
       let number1 = Math.round(Math.random() * 1000);
@@ -155,5 +156,6 @@ function selectOperator(e) {
   if (e.target.classList.contains("btn")) {
     selectedOperator = e.target.textContent;
     nextContent();
+    console.log(selectedOperator);
   }
 }
