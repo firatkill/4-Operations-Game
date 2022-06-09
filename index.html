@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <div id="selectScreen" style="text-align:center" class="hide  container">
+    <div id="selectScreen" style="text-align:center" class="show  container">
         <h1>
             Choose one of the operators to start the competition
         </h1>
@@ -30,29 +30,76 @@
 
         </div>
     </div>
+    <div id="operatingScreen" class="hide container  mt-4">
 
-    <div class="container">
-        <div style="background-color:rgb(105, 136, 105);padding:1rem" class="container">
-            <h1 style="text-align: center; ">4 OPERATIONS GAME</h1>
-            <div class="input-group ">
-                <span class="input-group-text" id="basic-addon1">Score</span>
-                <input type="button" class="form-control" placeholder="Username" aria-label="Username"
-                    aria-describedby="basic-addon1">
+
+        <div id="headerContainer" class="container">
+            <div style="background-color:rgb(105, 136, 105);padding:1rem" class="container">
+                <h1 style="text-align: center; ">4 OPERATIONS GAME</h1>
+                <div class="input-group mb-1 ">
+                    <span class="input-group-text" id="basic-addon1">Score</span>
+                    <input disabled type="button" id="scoreInput" class="form-control" placeholder="Username"
+                        aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group ">
+                    <span class="input-group-text" id="basic-addon1">Timer</span>
+                    <input disabled type="button" id="timeInput" class="form-control" placeholder="Username"
+                        aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+
+                <div class="container">
+
+                </div>
             </div>
-            <div class="input-group ">
-                <span class="input-group-text" id="basic-addon1">Timer</span>
-                <input type="button" class="form-control" placeholder="Username" aria-label="Username"
-                    aria-describedby="basic-addon1">
+            <div id="questionContainer" class="container">
+                <p
+                    style=" padding-left:1rem;padding-right:1rem;color:black;background-color:rgb(234,236,239);text-align: center;width:50%;margin:auto;border:1px solid black; padding-top:0.5rem;padding-bottom:0.5rem;border-radius:10px">
+                    What is
+                    the result of
+                    the
+                    following
+                    operation ?</p>
+                <span id="operationSpan"
+                    style="margin-left:auto;margin-right:auto;width:60%;font-size:3rem;margin-top:1rem;margin-bottom:1rem;border-radius:20px"
+                    class="hide badge bg-secondary">30
+                    : 2 =
+                    ?</span>
+                <span id="startButton"
+                    style="cursor:pointer;margin-right:auto;margin-left:auto;width:60%;font-size:3rem;margin-top:1rem;margin-bottom:1rem;border-radius:20px"
+                    class="show badge bg-secondary">Start Timer</span>
+                <div class="input-group flex-nowrap">
+                    <span class="input-group-text" id="addon-wrapping">Result</span>
+                    <input onchange="myFunction()" style="text-align:center;letter-spacing:0px" disabled type="text"
+                        id="resultInput" class="form-control" placeholder="">
+
+                </div>
+                <div class="container mt-3">
+
+                    <div class="parent">
+                        <div class="div1 btn btn-primary">DELETE</div>
+                        <div class="div2 btn btn-primary">1</div>
+                        <div class="div3 btn btn-primary">2</div>
+                        <div class="div4 btn btn-primary">3</div>
+                        <div class="div5 btn btn-primary">4</div>
+                        <div class="div6 btn btn-primary">5</div>
+                        <div class="div7 btn btn-primary">6</div>
+                        <div class="div8 btn btn-primary">7</div>
+                        <div class="div9 btn btn-primary">8</div>
+                        <div class="div10 btn btn-primary">9</div>
+                        <div class="div11 btn btn-primary">0</div>
+                        <div class="div12 btn btn-primary">-</div>
+                        <div class="div13 btn btn-primary">ENTER</div>
+                    </div>
+                </div>
             </div>
-
         </div>
-        <div class="container">
-            <p>What is the result of the following operation ?</p>
-            <p>30 : 2 </p>
 
-        </div>
+
     </div>
-
+    <div id="scoreTable" style="margin-top:10%;text-align: center;" class="hide">
+        <h1>YOUR FINAL SCORE IS : </h1>
+        <h1 style="font-size:10rem" id="endingScore" class="">10</h1>
+    </div>
 
     <!--Script Tags-->
 
